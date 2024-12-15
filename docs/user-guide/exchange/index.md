@@ -1,9 +1,9 @@
-Mof support real time exchange rate service which will apply to user bills.
+Cycor support real time exchange rate service which will apply to user bills.
 
 Please move to **Exchange Rate** to view exchange rates. **USD** will be base currency.
 
 ## Exchange rate
-Mof will pull exchange rate data every day. By default, Mof will use monthly exchange rate with rate of last day of month.
+Cycor will pull exchange rate data every day. By default, Cycor will use monthly exchange rate with rate of last day of month.
 
 ![](img/en/overview.png)
 

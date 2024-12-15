@@ -1,4 +1,4 @@
-site_name: Mof Documentation
+site_name: Cycor Documentation
 site_url: https://docs.mofcloud.com
 repo_name: mofcloud/docs
 repo_url: https://github.com/mofcloud/docs
@@ -129,4 +129,4 @@ nav:
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2024 mofcloud
+copyright: Copyright &copy; 2024 Cycor FinOps

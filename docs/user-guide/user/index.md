@@ -20,6 +20,6 @@ Following information can be updated.
 ![img](img/zh/unregister.png)
 
 ## Currency settings
-Mof will automatically exchange bills with currency configured by user.
+Cycor will automatically exchange bills with currency configured by user.
 
 User can **Override currency** also, please refer to [Exchange Rate](../exchange/index.md)

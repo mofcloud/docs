@@ -1,5 +1,5 @@
 ## Concept
-In order to map bills from cloud account to organizations, mof brings mapping concept which can assign bill groups to orgs.
+In order to map bills from cloud account to organizations, Cycor brings mapping concept which can assign bill groups to orgs.
 
 ![](img/en/org-arch.png)
 

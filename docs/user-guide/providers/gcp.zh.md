@@ -1,4 +1,4 @@
-Mof 会通过 service account 读取谷歌云账单相关数据。
+Cycor 会通过 service account 读取谷歌云账单相关数据。
 
 ---
 
@@ -12,7 +12,7 @@ Mof 会通过 service account 读取谷歌云账单相关数据。
 
     详细步骤请查看[Google Cloud 官方文档 - 将 Cloud Billing 数据导出到 BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery?hl=zh-cn)。
 
-    > Mof 建议您创建一个专用项目来托管 Cloud Billing 数据，以便更好地管理您的账单数据。
+    > Cycor 建议您创建一个专用项目来托管 Cloud Billing 数据，以便更好地管理您的账单数据。
 
 === "1.创建 Service Account"
     !!! example "解释"
@@ -58,7 +58,7 @@ Mof 会通过 service account 读取谷歌云账单相关数据。
 
 === "3.访问密钥"
     !!! example "解释"
-        Mof 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
+        Cycor 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
 
         ![img.png](img/zh/gcp-cred.png)
       
@@ -112,13 +112,13 @@ Mof 会通过 service account 读取谷歌云账单相关数据。
 
 ## 定时数据同步
 !!! example "解释"
-    如果开启，Mof 会按照配置，自动同步数据
+    如果开启，Cycor 会按照配置，自动同步数据
 
     ![](img/zh/cron.png)
 
 ## 标签管理
 !!! example "解释"
-    Mof 在同步账单之后，会列出所有可用的标签，如果想要在**智能账单**中按照标签分类，需要在这里配置。
+    Cycor 在同步账单之后，会列出所有可用的标签，如果想要在**智能账单**中按照标签分类，需要在这里配置。
 
     之所以有这配置，是因为标签可能会非常多（包括系统标签），会影响用户体验。
 

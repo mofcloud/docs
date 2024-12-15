@@ -1,4 +1,4 @@
-Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull billing data.
+Cycor use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull billing data.
 
 ---
 
@@ -17,7 +17,7 @@ Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull
 === "3.AK/SK"
     !!! example "Explanation"
         Please refer to official docs of [AK/SK](https://www.alibabacloud.com/help/en/cloud-migration-guide-for-beginners/latest/obtain-an-accesskey-pair?spm=a3c0i.23458820.2359477120.252.f0237d3f5WFa9F)
-        Mof needs **read only** permission.
+        Cycor needs **read only** permission.
 
         ![](img/en/aksk-cred.png)
 
@@ -86,7 +86,7 @@ Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+        Modifiable. Once updated, Cycor will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
@@ -94,13 +94,13 @@ Mof use [DescribeInstanceBill](https://www.alibabacloud.com/help/en) API to pull
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will run cron job based on configuration
+    Cycor will run cron job based on configuration
 
     ![](img/en/cron.png)
 
 ## Tag management
 !!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
+    Cycor will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
     ![](img/en/tag.png)
 

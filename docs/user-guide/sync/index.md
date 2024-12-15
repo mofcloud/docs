@@ -31,7 +31,7 @@ Please move to **Cloud Accounts** -> **Auto sync** to enable auto synchronizatio
     Sync resources of selected cloud account
     
     !!! tip "Iteration"
-        MofCloud team will keeps on working with optimizations.
+        Cycor team will keeps on working with optimizations.
 
     ![](img/en/sync-resource.png)
 

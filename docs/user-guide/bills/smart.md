@@ -1,4 +1,4 @@
-!!! tip "Let mof answer bellow questions for you："
+!!! tip "Let Cycor answer bellow questions for you："
     - Total Cost？
         - Mofis analysis
         - Cost explorer

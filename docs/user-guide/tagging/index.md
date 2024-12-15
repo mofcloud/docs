@@ -1,6 +1,6 @@
 ## Tag management
 
-Mof provider uniq user interface for different providers。Tags will be synced to providers. 
+Cycor provider uniq user interface for different providers。Tags will be synced to providers. 
 
 User may need permissions for account based of cloud providers. Please refer to **Provider** page for details
 
@@ -16,7 +16,7 @@ User may need permissions for account based of cloud providers. Please refer to 
     Account may need particular permissions for editing tags
 
     !!! tip "⚠️"
-        Permissions are different based on different providers, mof will keeps on tracking them
+        Permissions are different based on different providers, Cycor will keeps on tracking them
 
     ![](img/en/permission.png)
 
@@ -26,7 +26,7 @@ User may need permissions for account based of cloud providers. Please refer to 
     ![](img/en/coverage.png)
 
 ## Edit
-Mof provides uniq **Edit** user interface.
+Cycor provides uniq **Edit** user interface.
 
 === "Add"
 

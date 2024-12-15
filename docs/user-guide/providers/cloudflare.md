@@ -1,4 +1,4 @@
-Mof is using Cloudflare GraphQL to pull CDN usage data，user needs to provide CDN price in order to calc final bill amount.
+Cycor is using Cloudflare GraphQL to pull CDN usage data，user needs to provide CDN price in order to calc final bill amount.
 
 ---
 
@@ -25,7 +25,7 @@ Mof is using Cloudflare GraphQL to pull CDN usage data，user needs to provide C
 
 === "4.Permission"
     !!! example "解释"
-        Please grant read permission to Mof
+        Please grant read permission to Cycor
 
         ![](img/en/cloudflare-policy.png)
 
@@ -51,7 +51,7 @@ Mof is using Cloudflare GraphQL to pull CDN usage data，user needs to provide C
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+        Modifiable. Once updated, Cycor will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
@@ -59,13 +59,13 @@ Mof is using Cloudflare GraphQL to pull CDN usage data，user needs to provide C
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will run cron job based on configuration
+    Cycor will run cron job based on configuration
 
     ![](img/en/cron.png)
 
 ## Tag management
 !!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
+    Cycor will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
     ![](img/en/tag.png)
 

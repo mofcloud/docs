@@ -25,7 +25,7 @@ Custom type of cloud entity, please add data in account setting page.
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+        Modifiable. Once updated, Cycor will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
@@ -33,13 +33,13 @@ Custom type of cloud entity, please add data in account setting page.
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will run cron job based on configuration
+    Cycor will run cron job based on configuration
 
     ![](img/en/cron.png)
 
 ## Tag management
 !!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
+    Cycor will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
     ![](img/en/tag.png)
 

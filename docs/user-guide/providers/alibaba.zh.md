@@ -1,4 +1,4 @@
-Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/document_detail/473030.htm) 获取账单数据。
+Cycor 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/document_detail/473030.htm) 获取账单数据。
 
 ---
 
@@ -17,7 +17,7 @@ Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/doc
 === "3.AK/SK"
     !!! example "解释"
         请参考官方文档获取[访问密钥](https://help.aliyun.com/document_detail/268244.html)
-        Mof 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
+        Cycor 只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
 
         ![](img/zh/aksk-cred.png)
 
@@ -94,13 +94,13 @@ Mof 使用阿里云账单 API [DescribeInstanceBill](https://help.aliyun.com/doc
 
 ## 定时数据同步
 !!! example "解释"
-    如果开启，Mof 会按照配置，自动同步数据
+    如果开启，Cycor 会按照配置，自动同步数据
 
     ![](img/zh/cron.png)
 
 ## 标签管理
 !!! example "解释"
-    Mof 在同步账单之后，会列出所有可用的标签，如果想要在**智能账单**中按照标签分类，需要在这里配置。
+    Cycor 在同步账单之后，会列出所有可用的标签，如果想要在**智能账单**中按照标签分类，需要在这里配置。
 
     之所以有这配置，是因为标签可能会非常多（包括系统标签），会影响用户体验。
 

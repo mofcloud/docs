@@ -1,4 +1,4 @@
-Mof use [ListCustomerselfResourceRecords](https://support.huaweicloud.com/api-oce/mbc_00004.html) API to pull billing data.
+Cycor use [ListCustomerselfResourceRecords](https://support.huaweicloud.com/api-oce/mbc_00004.html) API to pull billing data.
 
 ---
 
@@ -17,7 +17,7 @@ Mof use [ListCustomerselfResourceRecords](https://support.huaweicloud.com/api-oc
 === "3.AK/SK"
     !!! example "Explanation"
         Please refer to official docs of [AK/SK](https://support.huaweicloud.com/usermanual-iam/iam_02_0003.html)
-        Mof needs **read only** permission.
+        Cycor needs **read only** permission.
 
         ![](img/en/aksk-cred.png)
 
@@ -58,7 +58,7 @@ Mof use [ListCustomerselfResourceRecords](https://support.huaweicloud.com/api-oc
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+        Modifiable. Once updated, Cycor will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
@@ -66,13 +66,13 @@ Mof use [ListCustomerselfResourceRecords](https://support.huaweicloud.com/api-oc
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will run cron job based on configuration
+    Cycor will run cron job based on configuration
 
     ![](img/en/cron.png)
 
 ## Tag management
 !!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
+    Cycor will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
     ![](img/en/tag.png)
 

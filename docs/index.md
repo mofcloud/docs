@@ -1,15 +1,15 @@
-![Image title](img/mof-arch-en.png)
+![Image title](img/Cycor-arch-en.png)
 
-Mof is a **FinOps Cloud Cost Analyser** to help cloud users analyse, manage and optimize cloud cost and cloud architecture.
+Cycor is a **FinOps Cloud Cost Analyser** to help cloud users analyse, manage and optimize cloud cost and cloud architecture.
 The system will collect data like cost, utilization, usage, tags and resource detail from multiple cloud providers and evaluating your cloud costs with suggestions.
 
-Mof integrates cost, utilization and usage data which are isolated with each other to figure out **root cause** of cloud cost changes.
+Cycor integrates cost, utilization and usage data which are isolated with each other to figure out **root cause** of cloud cost changes.
 
-In order to cover cloud users scenario, Mof support IAAS cloud providers like AWS, GCP, AlibabaCloud, HuaweiCloud and TencentCloud, but also PAAS providers like Agora, NetEaseYiDun, NetEaseYunxin and etc.
-In the future, Mof will keep on covering more cloud providers.
+In order to cover cloud users scenario, Cycor support IAAS cloud providers like AWS, GCP, AlibabaCloud, HuaweiCloud and TencentCloud, but also PAAS providers like Agora, NetEaseYiDun, NetEaseYunxin and etc.
+In the future, Cycor will keep on covering more cloud providers.
 
-There is no complex configuration and human touch for system. The only action user need to do is providing **READ_ONLY** credentials to Mof.
-Data syncing and analysis will be done by Mof automatically.
+There is no complex configuration and human touch for system. The only action user need to do is providing **READ_ONLY** credentials to Cycor.
+Data syncing and analysis will be done by Cycor automatically.
 
 <div class="grid cards" markdown>
 

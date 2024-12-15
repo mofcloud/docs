@@ -1,4 +1,4 @@
-Mof 会通过 service principal 读取账单相关数据。
+Cycor 会通过 service principal 读取账单相关数据。
 
 ---
 
@@ -10,10 +10,10 @@ Mof 会通过 service principal 读取账单相关数据。
     !!! example "解释"
         运行如下命令
 
-        请将 appId, tenant, password 记录下来，Mof 将会使用此密钥。
+        请将 appId, tenant, password 记录下来，Cycor 将会使用此密钥。
 
         ```shell
-            az ad sp create-for-rbac -n "mofcloud"
+            az ad sp create-for-rbac -n "Cycor"
         ```
 
 === "2.添加权限"
@@ -60,7 +60,7 @@ Mof 会通过 service principal 读取账单相关数据。
 
 === "2.扩展信息"
     !!! example "解释"
-        可修改，如果修改了账单报告名称，Mof 在下一次同步数据的时候，会从新的报告同步。
+        可修改，如果修改了账单报告名称，Cycor 在下一次同步数据的时候，会从新的报告同步。
 
 === "3.访问密钥"
     !!! example "解释"
@@ -68,13 +68,13 @@ Mof 会通过 service principal 读取账单相关数据。
 
 ## 定时数据同步
 !!! example "解释"
-    如果开启，Mof 会按照配置，自动同步数据
+    如果开启，Cycor 会按照配置，自动同步数据
 
     ![](img/zh/cron.png)
 
 ## 标签管理
 !!! example "解释"
-    Mof 在同步账单之后，会列出所有可用的标签，如果想要在**智能账单**中按照标签分类，需要在这里配置。
+    Cycor 在同步账单之后，会列出所有可用的标签，如果想要在**智能账单**中按照标签分类，需要在这里配置。
 
     之所以有这配置，是因为标签可能会非常多（包括系统标签），会影响用户体验。
 

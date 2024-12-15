@@ -1,4 +1,4 @@
-Mof will use **service principal** to read data from Azure
+Cycor will use **service principal** to read data from Azure
 
 ---
 
@@ -10,10 +10,10 @@ Mof will use **service principal** to read data from Azure
     !!! example "Explanation"
         Run bellow command
 
-        Record appId, tenant, password, mof will use these credential
+        Record appId, tenant, password, Cycor will use these credential
 
         ```shell
-        az ad sp create-for-rbac -n "mofcloud"
+        az ad sp create-for-rbac -n "cycor"
         ```
 
 === "2.Add permissions"
@@ -59,7 +59,7 @@ Mof will use **service principal** to read data from Azure
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+        Modifiable. Once updated, Cycor will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
@@ -67,13 +67,13 @@ Mof will use **service principal** to read data from Azure
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will run cron job based on configuration
+    Cycor will run cron job based on configuration
 
     ![](img/en/cron.png)
 
 ## Tag management
 !!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
+    Cycor will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
     ![](img/en/tag.png)
 

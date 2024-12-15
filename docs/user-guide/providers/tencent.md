@@ -1,4 +1,4 @@
-Mof use [DescribeBillDetail](https://www.tencentcloud.com/document/api/555/30756) API to pull billing data.
+Cycor use [DescribeBillDetail](https://www.tencentcloud.com/document/api/555/30756) API to pull billing data.
 
 ---
 
@@ -17,7 +17,7 @@ Mof use [DescribeBillDetail](https://www.tencentcloud.com/document/api/555/30756
 === "3.AK/SK"
     !!! example "Explanation"
         Please refer to official docs of [AK/SK](https://cloud.tencent.com/document/product/598/40488)
-        Mof needs **read only** permission.
+        Cycor needs **read only** permission.
 
         ![](img/en/aksk-cred.png)
 
@@ -90,7 +90,7 @@ Mof use [DescribeBillDetail](https://www.tencentcloud.com/document/api/555/30756
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+        Modifiable. Once updated, Cycor will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
@@ -98,13 +98,13 @@ Mof use [DescribeBillDetail](https://www.tencentcloud.com/document/api/555/30756
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will run cron job based on configuration
+    Cycor will run cron job based on configuration
 
     ![](img/en/cron.png)
 
 ## Tag management
 !!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
+    Cycor will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
     ![](img/en/tag.png)
 

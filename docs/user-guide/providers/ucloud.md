@@ -1,4 +1,4 @@
-Mof [ListUBillDetail](https://docs.ucloud.cn/api/ubill-api/list_u_bill_detail) API to pull billing data.
+Cycor [ListUBillDetail](https://docs.ucloud.cn/api/ubill-api/list_u_bill_detail) API to pull billing data.
 
 ---
 
@@ -17,7 +17,7 @@ Mof [ListUBillDetail](https://docs.ucloud.cn/api/ubill-api/list_u_bill_detail) A
 === "3.AK/SK"
     !!! example "Explanation"
         Please refer to official docs of [AK/SK](https://docs.ucloud.cn/uproject/user)
-        Mof needs **read only** permission.
+        Cycor needs **read only** permission.
 
         ![](img/en/aksk-cred.png)
 
@@ -78,7 +78,7 @@ Mof [ListUBillDetail](https://docs.ucloud.cn/api/ubill-api/list_u_bill_detail) A
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+        Modifiable. Once updated, Cycor will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
@@ -86,13 +86,13 @@ Mof [ListUBillDetail](https://docs.ucloud.cn/api/ubill-api/list_u_bill_detail) A
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will run cron job based on configuration
+    Cycor will run cron job based on configuration
 
     ![](img/en/cron.png)
 
 ## Tag management
 !!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
+    Cycor will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
     ![](img/en/tag.png)
 

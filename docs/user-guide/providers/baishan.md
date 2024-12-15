@@ -1,4 +1,4 @@
-Mof will use [chormedp](https://github.com/chromedp/chromedp) to select billing data from console.
+Cycor will use [chormedp](https://github.com/chromedp/chromedp) to select billing data from console.
 
 ---
 
@@ -28,7 +28,7 @@ Mof will use [chormedp](https://github.com/chromedp/chromedp) to select billing 
 
 === "4.Permission"
     !!! example "Explanation"
-        Mof won't do any **write** operation.
+    Cycor won't do any **write** operation.
 
 === "5.Default group by"
     !!! example "Explanation"
@@ -37,7 +37,7 @@ Mof will use [chormedp](https://github.com/chromedp/chromedp) to select billing 
 
 === "6.Extension"
     !!! example "Explanation"
-        BaishanCloud did not provide billing API, mof will login to console and collect bandwidth data and calc invoice based on price user provided
+        BaishanCloud did not provide billing API, Cycor will login to console and collect bandwidth data and calc invoice based on price user provided
 
         | Option            | Desc                                 |
         |---------------|--------------------------------------|
@@ -52,7 +52,7 @@ Mof will use [chormedp](https://github.com/chromedp/chromedp) to select billing 
 
 === "2.Extension"
     !!! example "Explanation"
-        Modifiable. Once updated, Mof will sync from new bill report.
+        Modifiable. Once updated, Cycor will sync from new bill report.
 
 === "3.Credential"
     !!! example "Explanation"
@@ -60,13 +60,13 @@ Mof will use [chormedp](https://github.com/chromedp/chromedp) to select billing 
 
 ## Auto sync
 !!! example "Explanation"
-    Mof will run cron job based on configuration
+    Cycor will run cron job based on configuration
 
     ![](img/en/cron.png)
 
 ## Tag management
 !!! example "Explanation"
-    Mof will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
+    Cycor will list all available tags in billing data. In order to group bills in **Smart bills** by tag, user needs to select keys here.
 
     ![](img/en/tag.png)
 
