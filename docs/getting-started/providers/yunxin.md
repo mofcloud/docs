@@ -1,47 +1,47 @@
 ---
-title: 网易云信
-description: 快速配置网易云信，并开始分析云成本健康状态。 
+title: Netease Yunxin
+description: Quickly configure Netease Yunxin and start analyzing cloud cost health.
 ---
 
-系统使用 [chormedp](https://github.com/chromedp/chromedp) 登陆控制台获取账单数据。
+System use [chormedp](https://github.com/chromedp/chromedp) login to console and fetching data.
 
-## 添加账号
-### **基本信息**
-请参考 [基本信息](basic.md)配置。
+## Add account
+### **Basic info**
+Please refer to [Basic](basic.md)
 
-### **地域**
-请跟据账号归属，选择相应的地域。**可修改**
+### **Region**
+Please select the corresponding region according to the account. **Editable**
 
-- [x] 中国站
-- [ ] 全球站
+- [x] China
+- [ ] Global
 
-### **访问密钥"**
-请输入[网易云信控制台](https://id.grow.163.com/)账号密码。
-账单数据，不会采取任何**写操作**，请放心使用。
+### **Credential**
+Please enter [Yunxin console](https://id.grow.163.com/) login email and password
+Only billing data will be collected. Mof won't do any **write** operation.
 
-## 更新账号
-请参考 [基本信息](basic.md)更新。
+## Update account
+Please refer to [Basic](basic.md)
 
-## 功能支持
+## Features
 
-| 功能         | 描述               |
-|------------|------------------|
-| **智能账单**   | 不支持分类            |
-| `成本浏览器`    | :material-check: |
-| `月账单`      | :material-check: |
-| `日账单`      | :material-check: |
-| `历史账单`     | :material-check: |
-| `账单过滤`     |  |
-| `单元成本浏览器`  |  |
-| `资源账单`     |  |
-| `计费项 & 用量` |  |
-| `Mofis 报告` | :material-check: |
-| `账单下载`     | :material-check: |
-| `定制消息推送`   | :material-check: |
-| `消息通知`     | :material-check: |
-| `汇率转换`     | :material-check: |
-| `服务器分析`    |  |
-| **数据同步**   |                  |
-| `手动同步`     | :material-check: |
-| `自动同步`     | :material-check: |
-| **标签管理**   |  |
+| Features              | Description          |
+|-----------------------|----------------------|
+| **Smart Bill**        | Groups not supported |
+| `Cost Explorer`       | :material-check:     |
+| `Monthly Bill`        | :material-check:     |
+| `Daily Bill`          | :material-check:     |
+| `History Bill`        | :material-check:     |
+| `Filters`             |                      |
+| `Unit Cost Explorer`  |                      |
+| `Resource Bill`       |                      |
+| `Charge item & usage` |                      |
+| `Mofis report`        | :material-check:     |
+| `Download`            | :material-check:     |
+| `Scheduled`           | :material-check:     |
+| `Notification`        | :material-check:     |
+| `Exchange`            | :material-check:     |
+| `Server analysis`     |                      |
+| **Data Sync**         |                      |
+| `Manual`              | :material-check:     |
+| `Auto`                | :material-check:     |
+| **Tag Management**    |                      |

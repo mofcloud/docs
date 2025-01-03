@@ -1,28 +1,28 @@
 ---
 title: Azure
-description: 快速配置Azure，并开始分析云成本健康状态。 
+description: Quickly configure Azure and start analyzing cloud cost health.
 ---
 
-系统会通过 service principal 读取账单相关数据。
+The system will read billing-related data through the service principal.
 
-## 准备工作
-安装 Azure CLI（如果已经有 service principal，请忽略） 
+## Preparation
+Install Azure CLI (if you already have a service principal, please skip this step)
 
-如果没有创建 service principal，请根据如下的步骤，进行创建。用户也可以在 Azure 控制台中创建，步骤请参考官方文档。
+If you don't have a service principal, please follow the steps below to create one. Alternatively, you can create it in the Azure portal; for the steps, refer to the official documentation.
 
-### 1.创建 Azure Service Principal
-运行如下命令
+### 1.Create Azure Service Principal
+Run bellow commands.
 
-请将 appId, tenant, password 记录下来，Mof 将会使用此密钥。
+Please copy appId, tenant, password which are needed by system.
 
 ```shell
 az ad sp create-for-rbac -n "mofcloud"
 ```
 
-### 2.添加权限
-您可以把 Billing account 或者 Management Group 的 READ 权限赋予 service principal。
+### 2. Add Permissions
+You can assign the READ permissions of the Billing account or Management Group to the service principal.
 
-运行如下命令（Billing account 或者 Management Group ID 请在控制台中获取）
+Run the following command (Billing account or Management Group ID can be obtained from the portal):
 
 ```shell
 az role assignment create --assignee <SERVICE_PRINCIPAL_APP_ID> --role Reader --scope "/providers/Microsoft.Management/managementGroups/<MANAGEMENT_GROUP_ID>"
@@ -34,47 +34,44 @@ OR
 az role assignment create --assignee <SERVICE_PRINCIPAL_APP_ID> --role Reader --scope "/providers/Microsoft.Management/managementGroups/<MANAGEMENT_GROUP_ID>"
 ```
 
-## 添加账号
-### **基本信息**
-请参考 [基本信息](basic.md)配置。
+## Add account
+### **Basic info**
+Please refer to [Basic](basic.md)
 
-### **地域**
-请跟据账号归属，选择相应的地域。**可修改**
+### **Region**
+Please select the corresponding region according to the account. **Editable**
 
-- [ ] 中国站
-- [x] 全球站
+- [ ] China
+- [x] Global
 
 ### **Credentials**
-请根据第一步创建的密钥信息填写。
+Fill in the key information created in Step 1.
 
-系统只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**权限表**查询权限。
+The system only requires read-only permissions. If the permissions are incomplete, it will result in incomplete data collection. You can refer to the permissions table to check the required permissions.
 
-## 更新账号
-请参考 [基本信息](basic.md)更新。
+## Update account
+Please refer to [Basic](basic.md)
 
+## Features
 
-## 功能支持
-
-| 功能         | 描述                                                      |
-|------------|---------------------------------------------------------|
-| **智能账单**   | 支持**服务**、**资源组**、**订阅**、**地域**、**账号**、**支付类型**、**标签**分类 |
-| `成本浏览器`    | :material-check:                                        |
-| `月账单`      | :material-check:                                        |
-| `日账单`      | :material-check:                                        |
-| `历史账单`     | :material-check:                                        |
-| `账单过滤`     | :material-check:                                        |
-| `单元成本浏览器`  | :material-check:                                        |
-| `资源账单`     | :material-check:                                        |
-| `计费项 & 用量` | :material-check:                                        |
-| `Mofis 报告` | :material-check:                                        |
-| `账单下载`     | :material-check:                                        |
-| `定制消息推送`   | :material-check:                                        |
-| `消息通知`     | :material-check:                                        |
-| `汇率转换`     | :material-check:                                        |
-| `服务器分析`    | :material-check:                                        |
-| **数据同步**   |                                                         |
-| `手动同步`     | :material-check:                                        |
-| `自动同步`     | :material-check:                                        |
-| **标签管理**   | :material-check:                                        |
-
-
+| Features              | Description                                                                                           |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+| **Smart Bill**        | Group by**Service**、**Resource group**、**Subscription**、**Region**、**Owner**、**Charge Type**、**Tags** |
+| `Cost Explorer`       | :material-check:                                                                                      |
+| `Monthly Bill`        | :material-check:                                                                                      |
+| `Daily Bill`          | :material-check:                                                                                      |
+| `History Bill`        | :material-check:                                                                                      |
+| `Filters`             | :material-check:                                                                                      |
+| `Unit Cost Explorer`  | :material-check:                                                                                      |
+| `Resource Bill`       | :material-check:                                                                                      |
+| `Charge item & usage` | :material-check:                                                                                      |
+| `Mofis report`        | :material-check:                                                                                      |
+| `Download`            | :material-check:                                                                                      |
+| `Scheduled`           | :material-check:                                                                                      |
+| `Notification`        | :material-check:                                                                                      |
+| `Exchange`            | :material-check:                                                                                      |
+| `Server analysis`     | :material-check:                                                                                      |
+| **Data Sync**         |                                                                                                       |
+| `Manual`              | :material-check:                                                                                      |
+| `Auto`                | :material-check:                                                                                      |
+| **Tag Management**    | :material-check:                                                                                      |

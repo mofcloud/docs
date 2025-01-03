@@ -1,73 +1,69 @@
 ---
 title: Cloudflare
-description: 快速配置 Cloudflare，并开始分析云成本健康状态。 
+description: Quickly configure Cloudflare and start analyzing cloud cost health.
 ---
 
-系统使用 Cloudflare GraphQL 获取 CDN 用量数据，用户需要配置与 Cloudflare 签署的 CDN 价格信息，以便计算账单数据。
+The system uses Cloudflare GraphQL to retrieve CDN usage data. Users need to configure the CDN pricing information signed with Cloudflare in order to calculate the billing data.
 
-后续，我们会支持通过 API 拉取账单数据。
+In the future, we will support retrieving billing data via API.
 
----
+## Partial support
+> Only **CDN** is supported now.
 
-## 部分支持
-Cloudflare 目前只支持 **CDN** 成本分析。
+## Add account
+### **Basic info**
+Please refer to [Basic](basic.md)
 
-## 添加账号
-### **基本信息**
-请参考 [基本信息](basic.md)配置。
+### **Region**
+Please select the corresponding region according to the account. **Editable**
 
+- [ ] China
+- [x] Global
 
-### **地域**
-请跟据账号归属，选择相应的地域。**可修改**
+### **Credential**
+Please refer to official docs for credential: [Cloudflare Credential](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)
 
-- [ ] 中国站
-- [x] 全球站
+The system only requires readable permissions. If the permissions are incomplete, data collection will be incomplete. You can select **Permission Table** to query permissions.
 
-### **访问密钥**
-请参考官方文档获取[访问密钥](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)
+### **Extension**
+If the minimum guaranteed traffic and minimum guaranteed cost are provided, Mof will first check if the usage is within the guaranteed range. If it exceeds, the cost will be calculated using the CDN unit price.
 
-账单数据，不会采取任何**写操作**，请放心使用。
+If the minimum guaranteed traffic and minimum guaranteed cost are not provided, Mof will calculate the cost using the CDN unit price.
 
+| Options                            | Description                                                                                                                                      |
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| CDN Price(USD/GB)                  | CDN traffic unit price. If the minimum guaranteed traffic and minimum guaranteed price are provided, this price will be the overflow unit price. |
+| CDN minimum guaranteed traffic(GB) | If you have signed a minimum guarantee with Cloudflare, please enter the minimum guaranteed traffic; otherwise, enter 0.                         |
+| CDN minimum guaranteed price(美元)   | If you have signed a minimum guarantee with Cloudflare, please enter the minimum guaranteed traffic; otherwise, enter 0.                         |
+| Price start month                  | Contract start month                                                                                                                             |
+| Price end month                    | Contract start month                                                                                                                                            |
 
-### **拓展信息**
-如果填写了保底流量 & 保底费用，Mof 会首先判断用量是否在保底区域内，如果溢出，会使用 CDN 单价计算成本。
+## Update account
+Please refer to [Basic](basic.md)
 
-如果没有填写保底流量 & 保底费用，Mof 会使用 CDN 单价计算成本。
+### **Extension**
+Editable。
 
-| 选项            | 使用场景                                  |
-|---------------|---------------------------------------|
-| CDN 单价(美元/GB) | CDN 流量单价，如果填写了保底流量 & 保底单价，此价格将会是溢出单价。 |
-| CDN保底流量(GB)   | 如果与 Cloudflare 签署了保底，请填写保底流量，否则填写 0。  |
-| CDN保底费用(美元)   | 如果与 Cloudflare 签署了保底，请填写保底费用，否则填写 0。  |
-| 价格开始月份        | 合约开始日期                                |
-| 价格结束月份        | 合约结束日期                                |
+## Features
 
-## 更新账号
-请参考 [基本信息](basic.md)更新。
-
-### **扩展信息**
-可修改。
-
-## 功能支持
-
-| 功能         | 描述               |
-|------------|------------------|
-| **智能账单**   | 不支持分类            |
-| `成本浏览器`    | :material-check: |
-| `月账单`      | :material-check: |
-| `日账单`      | :material-check: |
-| `历史账单`     | :material-check: |
-| `账单过滤`     | :material-check: |
-| `单元成本浏览器`  | :material-check: |
-| `资源账单`     | :material-check: |
-| `计费项 & 用量` | :material-check: |
-| `Mofis 报告` | :material-check: |
-| `账单下载`     | :material-check: |
-| `定制消息推送`   | :material-check: |
-| `消息通知`     | :material-check: |
-| `汇率转换`     | :material-check: |
-| `服务器分析`    |  |
-| **数据同步**   |                  |
-| `手动同步`     | :material-check: |
-| `自动同步`     | :material-check: |
-| **标签管理**   |  |
+| Features              | Description          |
+|-----------------------|----------------------|
+| **Smart Bill**        | Groups not supported |
+| `Cost Explorer`       | :material-check:     |
+| `Monthly Bill`        | :material-check:     |
+| `Daily Bill`          | :material-check:     |
+| `History Bill`        | :material-check:     |
+| `Filters`             |                      |
+| `Unit Cost Explorer`  |                      |
+| `Resource Bill`       |                      |
+| `Charge item & usage` |                      |
+| `Mofis report`        | :material-check:     |
+| `Download`            | :material-check:     |
+| `Scheduled`           | :material-check:     |
+| `Notification`        | :material-check:     |
+| `Exchange`            | :material-check:     |
+| `Server analysis`     |                      |
+| **Data Sync**         |                      |
+| `Manual`              | :material-check:     |
+| `Auto`                | :material-check:     |
+| **Tag Management**    |                      |

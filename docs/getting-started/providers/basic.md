@@ -1,71 +1,71 @@
 ---
-title: 添加/更新云账号基本信息
-description: 快速添加/更新云账号基本信息。 
+title: Add/Edit cloud account information
+description: Quickly add/edit cloud account information
 ---
 
-## 添加账号
-![填写基本信息](assets/basic/fill.png)
+## Add cloud account
+![fill basic info](assets/basic/fill.png)
 
-### **权限**
-系统的权限可能根据功能的扩展需要补充。用户可以在**控制台**中选择相应的云厂商，查看目前需要的权限。
+### **Permission**
+The system's permissions may need to be supplemented as features are expanded. 
+Users can select the corresponding cloud provider in the **console** to view the permissions currently required.
 
-![查看需要的权限](assets/basic/set-policy.png)
+![Permissions](assets/basic/set-policy.png)
+
+### **1.Basic info**
+The account name is used for display purposes and can be duplicated. It is recommended to use unique names. **Can be modified.**
 
 
-### **1.基本信息**
-账号名称用于展示，可以重名，建议使用不同的名称。 **可修改**
+### **2.Region**
+Please select the corresponding region based on the account ownership. **Can be modified.**
 
+- [x] China
+- [x] Region
 
-### **2.地域**
-请跟据账号归属，选择相应的地域。**可修改**
-
-- [x] 中国站
-- [x] 全球站
-
-### **3.统计维度**
-系统收集所有纬度的数据，默认纬度用于统计所有云厂商的成本，不影响数据准确性
+### **3.Group by**
+The system collects data from all dimensions. The default dimension is used to aggregate costs for all cloud providers and does not affect data accuracy.
 
 ---
 
-## 更新账号
-### **1.基本信息**
-可修改。
+## Edit account
+### **1.Basic info**
+**Can be modified.**
 
-![修改基本信息](assets/basic/edit-basic.png)
-
-
-### **2.访问密钥**
-不可修改
-
-![访问密钥](assets/basic/edit-cred.png)
-
-### **3.定时数据同步**
-如果开启，系统会按照配置，自动同步数据。需要订阅**专业版**。
-
-![定时数据同步](assets/basic/auto-sync.png)
-
-### **4.自定义折扣**
-如果用户有线下的折扣合约，并且不展示在账单数据中时，用户可以在此配置，折扣会影响到**智能账单**中的数据中。
-
-![更新自定义折扣](assets/basic/add-discount.png)
+![Edit basic info](assets/basic/edit-basic.png)
 
 
-### **5.锁定云账号和账单**
-为了防止重复拉取账单数据时，因为某些因素的改变，如标签等，导致账单过往账单可能会被更新，引入了两个锁。
+### **2.Credential**
+**Cannot be modified.**
 
-- **账号锁**：不再拉取新的数据
-- **账单锁**：不更新指定月份的账单
+![Credential](assets/basic/edit-cred.png)
 
-![锁定云账号和账单](assets/basic/lock.png)
+### **3.Scheduled data synchronization**
+If enabled, the system will automatically synchronize data according to the configuration.
+**Professional Edition** subscription is required.
+
+![Scheduled data synchronization](assets/basic/auto-sync.png)
+
+### **4.Custom discount**
+If the user has an offline discount contract that is not displayed in the billing data, they can configure it here. 
+The discount will affect the data in **Smart Bill**.
+
+![Custom discount](assets/basic/add-discount.png)
+
+### **5.Locking Cloud Accounts and Billing**
+To prevent duplicate billing data retrieval, where changes such as tags might cause past billing data to be updated, two locks have been introduced.
+
+- **Account Lock**：No new data will be fetched
+- **Bill Lock**： The billing for the specified month will not be updated
+
+![Locking Cloud Accounts and Billing](assets/basic/lock.png)
 
 
-### **6.数据覆盖**
-用于覆盖某月，某个 Group 下的【应付金额】。
+### **6.Data Override**
+Used to override the payment value for a specific month and a specific group.
 
-![锁定云账号和账单](assets/basic/override.png)
+![Data Override](assets/basic/override.png)
 
+### **7.Delete Cloud Account**
+When a cloud account is deleted, all cost and resource data will be deleted.
 
-### **7.删除云账号**
-删除云账号时，会删除所有成本 & 资源数据。
-
-![数据覆盖](assets/basic/delete.png)
+![Delete Cloud Account](assets/basic/delete.png)

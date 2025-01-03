@@ -1,90 +1,89 @@
 ---
-title: GCP
-description: 快速配置GCP，并开始分析云成本健康状态。 
+title: Google Cloud
+description: Quickly configure Google Cloud and start analyzing cloud cost health.
 ---
 
-系统会通过 service account 读取谷歌云账单相关数据。
+The system will read Google Cloud billing-related data through the service account.
 
-## 准备工作
-需要将 Cloud Billing 数据导出到 BigQuery，如果您尚未将 Cloud Billing 数据导出到 BigQuery。建议您创建一个专用项目来托管 Cloud Billing 数据，以便更好地管理您的账单数据。详细步骤请查看[Google Cloud 官方文档 - 将 Cloud Billing 数据导出到 BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery?hl=zh-cn)。
+## Preparation
+You need to export Cloud Billing data to BigQuery. If you have not yet exported Cloud Billing data to BigQuery, it is recommended to create a dedicated project to host the Cloud Billing data for better management of your billing data. 
+For detailed steps, refer to the Google Cloud Official Documentation - [Export Cloud Billing Data to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery).
 
+Please follow these steps:
 
-请按照以下步骤操作：
-    
-1. 创建一个新的项目，用于托管 Cloud Billing 导出数据
-2. 创建一个 BigQuery 数据集，用于存储 Cloud Billing 导出数据。
-3. 启用 Cloud Billing 导出，将数据导出到您创建的 BigQuery 数据集。
+1. Create a new project to host the Cloud Billing export data.
+2. Create a BigQuery dataset to store the Cloud Billing export data.
+3. Enable Cloud Billing export and export the data to the BigQuery dataset you created.
 
-
-#### 1.创建 Service Account
-在托管 Cloud Billing 数据的项目中创建 service account。
-创建时给新建 service account 授予对项目的 **“BigQuery Job User”** 角色和 **”Cloud Asset Viewer“** 角色。
-创建 service account 完成后，请生成 json 格式的密钥，用于后续的配置。
-
-
-#### 2.添加 BigQuery 权限
-导航到 BigQuery。确保您位于托管 Cloud Billing 的项目中。
-在“探索器”面板中，找到 Cloud Billing 数据集，单击名称旁边垂直的三个点(⋮)，然后单击“共享”。 在右侧，单击“+ 添加主账号”。 
-添写上面创建的 service account。 分配 **“BigQuery Data Viewer”** 角色，并保存。
+#### 1.Create Service Account
+Create a service account in the project that hosts the Cloud Billing data.
+When creating the service account, grant it the "BigQuery Job User" role and the "Cloud Asset Viewer" role for the project.
+After the service account is created, generate a JSON format key for subsequent configuration.
 
 
-#### 3.开启 Cloud Asset API
-如果您没有开启 Cloud Asset API，请导航到 API 和服务，点击“+启用 API 和服务”。
-搜索“Cloud Asset API”，进入 API 的详情页面，点击开启。
-
-## 添加账号
-### **基本信息**
-请参考 [基本信息](basic.md)配置。
-
-### **地域**
-请跟据账号归属，选择相应的地域。**可修改**
-
-- [ ] 中国站
-- [x] 全球站
-
-### 访问密钥
-系统只需要可读权限，如果权限不全，会导致数据收集不全，可以选择**测试账号权限**查询权限。
-
-- **服务账号密钥（JSON 格式）**
-
-    输入 service account 的 JSON 格式密钥。
-
-- **BigQuery 数据集名称**
-
-    输入 Cloud Billing 数据所在 BigQuery Dataset 的名称。
-
-- **BigQuery 表格名称**
-
-    输入 Cloud Billing 数据所在 BigQuery Dataset Table 的名称。
+#### 2.Add BigQuery Permissions
+Navigate to BigQuery. Ensure that you are in the project hosting the Cloud Billing data.
+In the "Explorer" panel, find the Cloud Billing dataset, click the vertical three dots (⋮) next to the name, and then click "Share." On the right, click "+ Add Principal."
+Enter the service account created earlier. Assign the "BigQuery Data Viewer" role and save.
 
 
-## 更新账号
-请参考 [基本信息](basic.md)更新。
+#### 3.Enable Cloud Asset API
+If you have not enabled the Cloud Asset API, navigate to API & Services, click "+ Enable APIs and Services".
+Search for "Cloud Asset API", go to the API details page, and click Enable.
 
-### 扩展信息
-可修改，如果修改了 BigQuery 相关名称，系统在下一次同步数据的时候，会从新的数据同步。
+## Add account
+### **Basic info**
+Please refer to [Basic](basic.md)
 
-## 功能支持
+### **Region**
+Please select the corresponding region according to the account. **Editable**
 
-| 功能         | 描述                                            |
-|------------|-----------------------------------------------|
-| **智能账单**   | 支持**服务**、**地域**、**账号**、**支付类型**、**标签**分类      |
-| `成本浏览器`    | :material-check:                              |
-| `月账单`      | :material-check:                              |
-| `日账单`      | :material-check:                              |
-| `历史账单`     | :material-check:                              |
-| `账单过滤`     | :material-check:                              |
-| `单元成本浏览器`  | :material-check:                              |
-| `资源账单`     | :material-check: 仅在 Export ResourceID 时支持 |
-| `计费项 & 用量` | :material-check:                              |
-| `Mofis 报告` | :material-check:                              |
-| `账单下载`     | :material-check:                              |
-| `定制消息推送`   | :material-check:                              |
-| `消息通知`     | :material-check:                              |
-| `汇率转换`     | :material-check:                              |
-| `服务器分析`    | :material-check:                              |
-| **数据同步**   |                                               |
-| `手动同步`     | :material-check:                              |
-| `自动同步`     | :material-check:                              |
-| **标签管理**   |                                               |
+- [ ] China
+- [x] Global
 
+### Credential
+The system only requires read-only permissions. If the permissions are incomplete, it will result in incomplete data collection. 
+You can choose **Test Account Permissions** to check the required permissions.
+
+- **Service account key (JSON format)**
+
+    Enter the JSON format key of the service account.
+
+- **BigQuery Dataset name**
+
+    Enter the name of the BigQuery dataset where the Cloud Billing data is stored.
+
+- **BigQuery Table name**
+
+    Enter the name of the BigQuery dataset table where the Cloud Billing data is stored.
+
+
+## Update account
+Please refer to [Basic](basic.md)
+
+### Extension
+Can be modified. If the BigQuery-related names are changed, the system will synchronize data from the new dataset during the next sync.
+
+## Features
+
+| Features              | Description                                                                     |
+|-----------------------|---------------------------------------------------------------------------------|
+| **Smart Bill**        | Group by**Service**、**Region**、**Owner**、**Charge Type**、**Tags** |
+| `Cost Explorer`       | :material-check:                                                                |
+| `Monthly Bill`        | :material-check:                                                                |
+| `Daily Bill`          | :material-check:                                                                |
+| `History Bill`        | :material-check:                                                                |
+| `Filters`             | :material-check:                                                                |
+| `Unit Cost Explorer`  | :material-check:                                                                |
+| `Resource Bill`       | :material-check:                                                                |
+| `Charge item & usage` | :material-check:                                                                |
+| `Mofis report`        | :material-check:                                                                |
+| `Download`            | :material-check:                                                                |
+| `Scheduled`           | :material-check:                                                                |
+| `Notification`        | :material-check:                                                                |
+| `Exchange`            | :material-check:                                                                |
+| `Server analysis`     | :material-check:                                                                |
+| **Data Sync**         |                                                                                 |
+| `Manual`              | :material-check:                                                                |
+| `Auto`                | :material-check:                                                                |
+| **Tag Management**    | :material-check:                                                                |

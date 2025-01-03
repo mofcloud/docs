@@ -16,11 +16,11 @@ Please select the corresponding region according to the account. **Editable**
 - [x] Global
 
 ### **AK/SK**
-Please refer to official docs for credential: [AWS Credential](https://help.aliyun.com/document_detail/268244.html)
+Please refer to official docs for credential: [Alibaba Credential](https://help.aliyun.com/document_detail/268244.html)
 
 The system only requires readable permissions. If the permissions are incomplete, data collection will be incomplete. You can select **Permission Table** to query permissions.
 
-## Update account
+**## Update account
 Please refer to [Basic](basic.md)
 
 ## Features
@@ -45,4 +45,4 @@ Please refer to [Basic](basic.md)
 | **Data Sync**         |                                                                                 |
 | `Manual`              | :material-check:                                                                |
 | `Auto`                | :material-check:                                                                |
-| **Tag Management**    | :material-check:                                                                |
+| **Tag Management**    | :material-check:                                                                |**

@@ -74,7 +74,7 @@ nav:
           - "UCloud": "getting-started/providers/ucloud.md"
           - "Agora": "getting-started/providers/agora.md"
           - "Baishan Cloud": "getting-started/providers/baishan.md"
-
+          - "Netease Yunxin": "getting-started/providers/yunxin.md"
       - "Communication":
           - "Wechat work": "getting-started/comm/wechat.md"
           - "DingDing": "getting-started/comm/ding.md"

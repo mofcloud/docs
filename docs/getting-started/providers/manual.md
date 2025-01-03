@@ -1,26 +1,26 @@
 ---
-title: 手动输入
-description: 快速配置手动输入，并开始分析云成本健康状态。 
+title: Manual
+description: Quickly configure Manual and start analyzing cloud cost health.
 ---
 
-手动输入，当用户使用系统不支持的云厂商时，可以使用手动输入每月账单数据。
+When the user is using a cloud provider that is not supported by the system, they can manually input the monthly billing data.
 
-账单数据可以在创建成功之后，在云账号页面中进行编辑。
+The billing data can be edited in the cloud account page after successful creation.
 
-## 添加账号
-### **基本信息**
-请参考 [基本信息](basic.md)配置。
+## Add account
+### **Basic info**
+Please refer to [Basic](basic.md)
 
-### 地域
-确认货币属性。
+### **Region**
+Please select the corresponding region according to the account. **Editable**
 
-- 中国（CNY）
-- 全球（USD）
+- [x] China（CNY）
+- [x] Global（USD）
 
-## 更新账号
-请参考 [基本信息](basic.md)更新。
+## Update account
+Please refer to [Basic](basic.md)
 
-## 编辑账单数据
-编辑月账单数据。
+## Edit bill data
+Edit bill data monthly.
 
-![编辑月账单数据](assets/edit-manual.png)
+![Edit bill data](assets/edit-manual.png)
