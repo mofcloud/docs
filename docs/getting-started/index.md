@@ -1,127 +1,34 @@
-## Add Cloud Account
-=== "1: Choose Cloud"
-    ![](img/en/add-account-to-choose.png)
+---
+title: Add Cloud Account
+description: Quickly configure your first cloud provider and start analyzing your cloud cost health.
+---
 
-=== "2: Account info"
+The system currently supports 10+ popular cloud vendors at home and abroad, and new cloud vendors will be added in the future, including IAAS, PAAS, and SAAS. 
+You can contact us to add the cloud vendor you need.
 
-    !!! info "Steps"
-        - Choose **Cloud Accounts** -> **Add Cloud Account** -> **AWS**
+## Select Cloud Provider
+Move to **Accounts** -> **Add Cloud Account** -> **Select your cloud provider**
 
-        - Fill forms
-            - **Basic info**：For represent, username could be duplicated
-            - **Locale**：If currency of AWS is unknown, currency of global(USD), china(CNY) would be used for billing data
-            - **AK/Sk**：Refer to [official docs](https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) to get credentials，permissions as bellow:
-            ``` json
-            {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Sid": "VisualEditor0",
-                        "Effect": "Allow",
-                        "Action": [
-                            "sts:GetCallerIdentity",
-                            "iam:ListAttachedUserPolicies",
-                            "iam:GetPolicy",
-                            "iam:GetPolicyVersion",
-                            "ce:GetCostAndUsage",
-                            "ce:GetDimensionValues",
-                            "ce:GetTags",
-                            "ec2:Describe*",
-                            "cur:DescribeReportDefinitions",
-                            "s3:ListBucket",
-                            "s3:GetObject",
-                            "tag:GetResources",
-                            "tag:TagResources",
-                            "tag:UntagResources"
-                        ],
-                        "Resource": "*"
-                    }
-                ]
-            }
-            ```
-            - **Default group by**：All billing data will be collected with all groups, it's used while grouping all cloud accounts data.
-            - **Bill report name**: Optional. Resource level bills will be available if provided. [Official docs for enabling bill report on AWS](https://docs.aws.amazon.com/zh_cn/cur/latest/userguide/cur-create.html). 
-        ![Image title](img/en/add-account-to-fill.png)
+![Select Cloud Provider](assets/choose.png)
 
-=== "3: Sync Data"
+## Set Cloud Account Policy
+Please follow **Guide** to complete policy assignment. **Policy table** listed all permissions required by system.
 
-    !!! info "Check synchronization"
-        As soon as account added, system will start to collect data immediately. 
+![Set Cloud Account Policy](assets/set-policy.png)
 
-        At first time, system will collect 3 months bill data and resource data.
-    
-        ![Image title](img/en/sync-data.png)
+## Fill Cloud Account Info
+Please fill required fields based on your selection.
 
-## Smart bills
-As soon as synchronization finished, **Smart bills** is available for bill analysis.
+!!! info "Basic"
+    - **Basic Info**：Name and description only for representation, can be updated later.
+    - **Region**：If currency are unknown for cloud account, currency will be determined based on region. Global(USD), China(CNY)
+    - **Default group by**：The system collects data from all dimensions. The default dimension is used to count the costs of all cloud vendors, which does not affect the accuracy of the data.
 
-!!! info "功能"
-    **Bill groups**，**Filter**，**Download bills** are common to all views.
+![Fill Cloud Account Info](assets/fill.png)
 
-    - **Smart**
-        - Abnormal, groups, daily charts, resource bills, bill detail, mofis analysis
-    - **History**
-        - Bill history, Mofis analysis
-    - **Server Analysis**
-        - Utilization, bills, configurations, monitoring data, Mofis analysis
+## Start Sync Data
+As soon as the cloud account is successfully added, the system will automatically start collecting data, which can be viewed in **Data Synchronization**.
 
-### Smart
-!!! example "Target bill abnormal and root cause"
-    1. Target abnormal **Unit** via **Abnormal chart** & **Mofis analysis**  
-    2. Target estimation **Unit** via **Group chart**
-    3. Target daily expense **Unit** via **Daily chart**
-    4. Target abnormal **resource** via **resource bill**
-    5. Target **root cause** via **resource usage**
+The system synchronizes data from the previous **3 months** by default, and users can synchronize data from other time periods by themselves.
 
-=== "Abnormal Chart"
-
-    ![Image title](img/en/smart-bill-1.png)
-
-=== "Group Chart"
-
-    ![Image title](img/en/smart-bill-2.png)
-
-=== "Daily Chart"
-
-    ![Image title](img/en/smart-bill-3.png)
-
-=== "Resource bill"
-
-    ![Image title](img/en/smart-bill-4.png)
-
-=== "Resource usage"
-
-    ![Image title](img/en/smart-bill-5.png)
-
-### History
-![Image title](img/en/bill-trend.png)
-
-## Download bills
-![Image title](img/en/download-bill.png)
-
-![Image title](img/en/download-bill-excel.png)
-
-## Server analysis
-!!! example "Determine【Unused】&【Low util】"
-    1. Determine【Unused】&【Low util】servers via **Overview**
-    2. Check **Low util** via**Metrics**
-    3. Check historical reasons via **Bill**
-    4. View **configurations** via *Attributes*
-
-=== "Overview"
-
-    ![Image title](img/en/server-1.png)
-
-=== "Metrics"
-
-    ![Image title](img/en/server-2.png)
-
-=== "Bill"
-
-    ![Image title](img/en/server-4.png)
-
-=== "Attributes"
-
-    ![Image title](img/en/server-3.png)
-
-
+![Start Sync Data](assets/sync/sync.png)
