@@ -7,7 +7,7 @@ theme:
   name: material
   language: en
   logo: assets/logo.svg
-  favicon: assets/favicon.svg
+  favicon: assets/favicon.ico
   features:
     - navigation.tracking
     - navigation.top
@@ -54,6 +54,7 @@ nav:
           - "Cloud Account": "getting-started/smb/abill.md"
           - "Multi Cloud": "getting-started/smb/pbill.md"
           - "Combined": "getting-started/smb/ubill.md"
+      - "Showback": "getting-started/showback.md"
       - "Data Sync": "getting-started/sync.md"
       - "Exchange": "getting-started/exchange.md"
       - "Tag Management": "getting-started/tagging.md"
